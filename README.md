@@ -1,4 +1,5 @@
 # Inverse-Square-Root-Numba-Quake-III-Magic-
+![Fast inverse square root algorithm](assets/fast-inverse-sqrt.svg)
 🧠 Methodology
 64-bit Quake III Initial Guess: We use the famous fast inverse square root bit-hack, adapted for 64-bit floats (0x5fe6eb50c7b537a9), to get an incredibly accurate starting guess without calling any math libraries.
 Register-Only Scalar Loop: Instead of using NumPy-style vectorization (which creates slow intermediate memory arrays), we use an explicit for loop. This forces Numba to keep all math inside CPU registers, completely eliminating RAM memory bandwidth bottlenecks.
